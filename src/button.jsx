@@ -14,7 +14,7 @@ let Button = (props) => {
         setModalIsOpen(false);
     };
 
-    let music = DB.map((title)=>(
+    let content = DB.map((title)=>(
         title.map((str) => (
             props.number == str.id && props.name==str.name? <ModalContent closeModal={closeModal}
              text={str.text} answer={str.answer}/> : null
@@ -27,10 +27,10 @@ let Button = (props) => {
             <button onClick={openModal} className={style.button}>
                 {props.number}
             </button>
+           
             <Modal isOpen={modalIsOpen}
-                onRequestClose={closeModal} className={style.modal}>
-                {music}
-                
+                onRequestClose={closeModal} className={style.modal}>    
+                {content}
             </Modal>
             
         </>

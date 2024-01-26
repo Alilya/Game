@@ -5,13 +5,12 @@ function App() {
   return (
     <div className={style.container}>
       
-     <RowTable title={"Угадай мелодию"} name="music" />
+     <RowTable title={"Ты узнаешь ее из тысячи"} name="music" />
      <RowTable title={"Хоть какой-то интеллект"} name="chatgpt" />
-     <RowTable title={"Китай"} name="china" />
-     <RowTable title={"Эмодзи"} name="emoji" />
+     <RowTable title={"Spotify с Алиэкспресс"} name="china" />
      <RowTable title={"Где логика?"} name="logic" />
-      
-      
+     <RowTable title={"Паша Техник, прости Господи"} name="pavel" />
+            
     </div>
   );
 }

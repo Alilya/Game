@@ -12,7 +12,7 @@ const ModalContent = (props) => {
                 }}>X</button>
             <h1 className={style.text}>{props.text}</h1>
             <button onClick={() => setHidden(!hidden)} className={style.button}>Ответ</button>
-            {!hidden && props.answer}
+            <h3 className={style.answer}>{!hidden && props.answer}</h3>
         </div>
     );
 };

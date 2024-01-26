@@ -1,24 +1,52 @@
 .container{
     display: block;
     width: 100%;
-
 }
 .close{
-    color:red;
     display: flex;
     align-items: start;
     justify-content: start;
+    border: none;
+    background-color: rgb(246, 255, 255);
+    color: rgb(60, 60, 60);
+}
+.close:hover{
+    color: black;
 }
 .text{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5%;
+    font-size: large;
+    color: rgb(0, 43, 111);
+    white-space: pre;
 }
 .button{
     display: flex;
     justify-content: center;
     width: 50%;
     margin-left: 25%;
-    margin-bottom: 10%;
+    margin-bottom: 2%;
+    background-color: rgb(182, 221, 255);
+    padding: 15px;
+    font-size: medium;
+    border: none;
+    color: rgb(0, 34, 128);
+}
+.button:hover{
+    background-color: rgb(143, 203, 255);
+}
+.text img{
+    margin: 0;
+    width: 400px;
+    padding: 0;
+}
+.answer{
+    margin-top: 2%;
+    font-size: larger;
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 34, 128);
 }

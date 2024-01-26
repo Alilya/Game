@@ -1,8 +1,14 @@
-let music;
+import cross from './images/кросы.jpg'
+import koldun from './images/куклаКолдуна.jpg'
+import zarya from './images/наЗаре.jpg'
+import bar from './images/поБарам.jpg'
+import puyala from './images/пыяла.jpg'
+
+let music; 
 let chatgpt;
 let china;
-let emoji;
 let logic;
+let pavel;
 
 let DB = [
 
@@ -14,32 +20,93 @@ let DB = [
         { id: 500, text: "music5", answer: "answer", name:"music" },
     ],
     chatgpt= [
-        { id: 100, text: "chatgpt1", answer: "answer", name:"chatgpt"},
-        { id: 200, text: "chatgpt2", answer: "answer", name:"chatgpt"},
-        { id: 300, text: "chatgpt3", answer: "answer" ,name:"chatgpt"},
-        { id: 400, text: "chatgpt4", answer: "answer" ,name:"chatgpt"},
-        { id: 500, text: "chatgpt5", answer: "answer" ,name:"chatgpt"},
+        {
+            id: 100, text:
+            `В моей ладони пульсирует сердце майора, 
+            А в другой – легкий след окурка Camel.
+            Я, чёрт возьми, целый день в атмосфере радости,
+            Меня не удержать — семь попыток впустую.
+            Пробовали, бл***, неудачно, Летели, гомосеки, но впустую.
+            Если мне нужны взрывные головы,
+            Меня не смущают эти небольшие размеры`, answer: "Кровосток: Сердце майора", name: "chatgpt"
+        },
+
+        {
+            id: 200, text: `На какое-то время, до второго, я отправлюсь в место,
+            где прибой балтийский встречает взгляд.
+            Глаза, не привыкшие к этому окружению, увидят игру волн.
+            В морских приключениях, будучи и моряком, и подводным путешественником,
+            Себя обнаружу в глубинах, если вдруг окажусь на дне`, answer: "Игорь Скляр: Комарово", name: "chatgpt"
+        },
+        { id: 300, text: `Попробуй взглядом, ощути мои ласки,
+        Неотразимо нужно мне это.
+        Снова в вихре кажется, что в голове кружится.
+        Милый, я признаю свою ошибку, как сладкий мармелад.`, answer: "Катя Лель: Мой мармеладный (Я не права)", name: "chatgpt" },
+        { id: 400, text: `Призови меня в свой контекст,
+        Путешествие сквозь амбивалентные периоды.
+        Экспедиция за тобой,
+        Где бы ориентиры маршрута ни предрекали.
+        Я достигну точки, где ты раскрываешь в атмосфере светило,
+        Где разрушенные иллюзии
+        Восстанавливают силу, взлетая в высокие сферы снова.`, answer: "Алла Пугачёва: Позови меня с собой" ,name:"chatgpt"},
+        { id: 500, text: `Потерял рассудок, плаваю в безумие,
+        Она мне необходима, она мне необходима,
+        Она мне необходима.
+        Я потерялась в неразберихе.
+        Меня вовсе нет, полностью и, безусловно, серьезно.
+        Ситуация "помощь", в явном затруднении.
+        Сама себя не понимаю, откуда ты взялась,
+        Почему, почему, поддалась твоему влиянию?`, answer: "Тату: Я сошла с ума" ,name:"chatgpt"},
     ],
     china=[
-        { id: 100, text: "china1", answer: "answer",name:"china" },
-        { id: 200, text: "china2", answer: "answer", name:"china"},
-        { id: 300, text: "china3", answer: "answer", name:"china" },
-        { id: 400, text: "china4", answer: "answer", name:"china" },
-        { id: 500, text: "china5", answer: "answer", name:"china" },
-    ],
-    emoji=[
-        { id: 100, text: "emoji1", answer: "answer", name:"emoji" },
-        { id: 200, text: "emoji2", answer: "answer", name:"emoji" },
-        { id: 300, text: "emoji3", answer: "answer", name:"emoji" },
-        { id: 400, text: "emoji4", answer: "answer", name:"emoji" },
-        { id: 500, text: "emoji5", answer: "answer", name:"emoji" },
+        { id: 100, text: `От вашего крика
+        Не вздох
+        Я так потерян, я слишком свободен
+        Я успокоился от длинного слова
+        Когда вы внезапно решите снова получить крылья ...
+        Переместить руку от моего пульса
+        Я жив (слишком жив)
+        Снять мой пульс
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa`, answer: "Моя Мишель (Ева Польна): Зима в сердце" ,name:"china" },
+        { id: 200, text: `Реактивный: стекло всегда наполовину полное, всегда
+        Это хорошо и не существует
+        "Да" между "нет" и "да"
+        Я верю, что лучшая жизнь, жизнь танцует под наблюдением чувствительного Бога
+        Повторите это упражнение`, answer: "Кровосток: Думай позитивно", name:"china"},
+        { id: 300, text: `Я пользователи делаю то, что я хочу делать
+        Я хочу посадить -я звоню доктору (Алио)
+        Кто меня не любит, я тебя не слышу (что?)
+        Ты только что завидую мне, я молчу
+        Когда я этого хочу, я не держу размер
+        Я не себя самостоятельно себя.
+        Мой продюсер сказал: «Ты поп -звезда»
+        Кстати, мой продюсер - мой биумбан, да`, answer: "Инстасамка: За деньги да", name:"china" },
+        { id: 400, text: `Дом снова один и тот же дом
+        Как и я, он знаком со мной, -
+        Он думает, что я странный человек:
+        "Он снова здесь
+        Стоять прямо здесь
+        Не спать всю ночь
+        И Т. Д ... ""`, answer: "Секрет: Моя любовь на пятом этаже", name:"china" },
+        { id: 500, text: `Я использую это, просыпается Аган
+        Это больше не бьет меня, больше не больно.
+        Поверьте, это не слезы -просто вода
+        Это больше не бьет меня, больше не больно.
+        я привык`, answer: "Олечка Бузова: Привыкаю", name:"china" },
     ],
     logic= [
-        { id: 100, text: "logic1", answer: "answer", name:"logic" },
-        { id: 200, text: "logic2", answer: "answer", name:"logic" },
-        { id: 300, text: "logic3", answer: "answer", name:"logic" },
-        { id: 400, text: "logic4", answer: "answer", name:"logic" },
-        { id: 500, text: "logic5", answer: "answer", name:"logic" },
+        { id: 100, text: <img src={cross}/>, answer: "Тима Белорусских: Мокрые кроссы", name:"logic" },
+        { id: 200, text: <img src={bar}/>, answer: "Анна Асти: По барам", name:"logic" },
+        { id: 300, text:  <img src={puyala}/>, answer: "АИГЕЛ: Пыяла", name:"logic" },
+        { id: 400, text:  <img src={koldun}/>, answer: "Король и Шут: Кукла колдуна", name:"logic" },
+        { id: 500, text:  <img src={zarya}/>, answer: "Альянс (Баста): На заре", name:"logic" },
+    ],
+    pavel= [
+        { id: 100, text: "logic1", answer: "answer", name:"pavel" },
+        { id: 200, text: "logic2", answer: "answer", name:"pavel" },
+        { id: 300, text: "logic3", answer: "answer", name:"pavel" },
+        { id: 400, text: "logic4", answer: "answer", name:"pavel" },
+        { id: 500, text: "logic5", answer: "answer", name:"pavel" },
     ]
 
 ]
