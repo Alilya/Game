@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import RowTable from './rowTable';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+     <RowTable title={"Угадай мелодию"} name="music"/>
+     <RowTable title={"Хоть какой-то интеллект"} name="chatgpt"/>
+     <RowTable title={"Китай"} name="china"/>
+     <RowTable title={"Эмодзи"} name="emoji"/>
+     <RowTable title={"Где логика?"} name="logic" />
+      
+      
     </div>
   );
 }
