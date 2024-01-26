@@ -1,24 +1,18 @@
 import React, { useState } from "react";
-import  "./modal.css"
+import style from "./styles/modal.module.css"
 
 const ModalContent = (props) => {
     const [hidden, setHidden] = useState(true);
-    
+
     return (
-        <div>
-            <button
+        <div className={style.container}>
+            <button className={style.close}
                 onClick={(e) => {
                     props.closeModal();
-                }}
-            >
-                X
-            </button>
-            <div>
-               <h1>{props.text}</h1> 
-               <button onClick={() => setHidden(!hidden)}>Ответ</button>    
-               {!hidden && props.answer}  
-                
-            </div>
+                }}>X</button>
+            <h1 className={style.text}>{props.text}</h1>
+            <button onClick={() => setHidden(!hidden)} className={style.button}>Ответ</button>
+            {!hidden && props.answer}
         </div>
     );
 };

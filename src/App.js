@@ -1,14 +1,14 @@
-import './App.css';
+import style from "./styles/app.module.css"
 import RowTable from './rowTable';
 
 function App() {
   return (
-    <div className="App">
+    <div className={style.container}>
       
-     <RowTable title={"Угадай мелодию"} name="music"/>
-     <RowTable title={"Хоть какой-то интеллект"} name="chatgpt"/>
-     <RowTable title={"Китай"} name="china"/>
-     <RowTable title={"Эмодзи"} name="emoji"/>
+     <RowTable title={"Угадай мелодию"} name="music" />
+     <RowTable title={"Хоть какой-то интеллект"} name="chatgpt" />
+     <RowTable title={"Китай"} name="china" />
+     <RowTable title={"Эмодзи"} name="emoji" />
      <RowTable title={"Где логика?"} name="logic" />
       
       

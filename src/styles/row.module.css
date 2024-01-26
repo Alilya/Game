@@ -1,0 +1,21 @@
+*{
+    box-sizing: border-box;
+}
+.table{
+    margin-bottom: 5%;
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+   
+}
+.row{
+    display: inline;
+    color:rgb(41, 0, 192);
+    width: 50%;
+    font-size: 40px;
+
+}
+.container{
+    width: max-content;
+}
