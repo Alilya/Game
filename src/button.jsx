@@ -27,12 +27,6 @@ let Button = (props) => {
 
     return (
         <>
-             {/* <input type="checkbox" id="activate-div" className="activate-div"/>
-            <label for="activate-div">
-                <button onClick={openModal} className={style.button}>
-                    {!check?props.number:0}
-                </button>
-            </label>  */}
             <button onClick={openModal} className={style.button} id="color">
                 {!check?props.number:0}
             </button> 
