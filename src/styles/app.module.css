@@ -5,3 +5,25 @@
     width:80vw;
     display: block;
 }
+.modalSlider{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin: auto;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 2%;
+    background-color: rgb(182, 221, 255);
+    padding: 15px;
+    font-size: large;
+    font-style: bold;
+    border: none;
+    color: rgb(0, 58, 218);
+}
+.button:hover{
+    background-color: rgb(143, 203, 255);
+}

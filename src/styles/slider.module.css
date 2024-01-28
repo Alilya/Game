@@ -1,0 +1,27 @@
+.sliderContainer div img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.sliderContainer{
+    background-color: rgb(255, 255, 255);
+    padding: 5%;
+    width: 80%;
+    display: block;
+    justify-items: center;
+}
+.sliderContainer div{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+}
+p{
+    color: rgb(0, 34, 147);
+    font-size: 35px;
+    text-align: center 
+}
+p1{
+    color: rgb(0, 34, 147);
+    font-size: 35px;
+}
